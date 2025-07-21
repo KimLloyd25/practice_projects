@@ -4,13 +4,13 @@
 from random import randint
 
 #Set play variable
-play = "Y"
+play = "y"
 
 #Set the options variable to collection of options
 options = ["rock", "paper", "scissors"]
 
 #Loop through game
-while (play == "Y" or "y"):
+while (play == "y"):
 
   #Randomly select a value from options for the computer
   computer = options[randint(0,2)]
@@ -18,6 +18,7 @@ while (play == "Y" or "y"):
 
   #Ask player for their choice of rock, paper or scissors
   player = input("Rock, paper, scissors? ")
+  #Set player variable to all lowercase
   player = player.lower()
 
   #If statements to decide winner of game and output messages
@@ -46,10 +47,9 @@ while (play == "Y" or "y"):
   
   #Ask player if they want to play again
   play = input("Would you like to play again? (Y/N) ")
-  if play == "Y":
-    computer = ""
-    continue
-  elif play == "y":
+  #Set play variable to all lowercase
+  play = play.lower()
+  if play == "y":
     computer = ""
     continue
   else:
